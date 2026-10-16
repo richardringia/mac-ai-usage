@@ -6,14 +6,66 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		44E996DC304C105F00C4ED58 /* AiUsageWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 44E996D0304C105F00C4ED58 /* AiUsageWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44E996C7304C105F00C4ED58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44E996A5304C105E00C4ED58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44E996AC304C105E00C4ED58;
+			remoteInfo = AiUsage;
+		};
+		44E996D7304C105F00C4ED58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44E996A5304C105E00C4ED58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44E996D2304C105F00C4ED58;
+			remoteInfo = AiUsageWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44E996DB304C105F00C4ED58 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				44E996DC304C105F00C4ED58 /* AiUsageWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		44E996AD304C105E00C4ED58 /* AiUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44E996C0304C105F00C4ED58 /* AiUsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiUsageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44E996D0304C105F00C4ED58 /* AiUsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AiUsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		44E996AF304C105E00C4ED58 /* AiUsage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AiUsage;
+			sourceTree = "<group>";
+		};
+		44E996C1304C105F00C4ED58 /* AiUsageTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AiUsageTests;
+			sourceTree = "<group>";
+		};
+		44E996D1304C105F00C4ED58 /* AiUsageWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AiUsageWidget;
+			sourceTree = "<group>";
+		};
+		C0DE00000000000000000001 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +78,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44E996C4304C105F00C4ED58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44E996D4304C105F00C4ED58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		44E996A4304C105E00C4ED58 = {
 			isa = PBXGroup;
 			children = (
+				C0DE00000000000000000001 /* Shared */,
 				44E996AF304C105E00C4ED58 /* AiUsage */,
+				44E996C1304C105F00C4ED58 /* AiUsageTests */,
+				44E996D1304C105F00C4ED58 /* AiUsageWidget */,
 				44E996AE304C105E00C4ED58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				44E996AD304C105E00C4ED58 /* AiUsage.app */,
+				44E996C0304C105F00C4ED58 /* AiUsageTests.xctest */,
+				44E996D0304C105F00C4ED58 /* AiUsageWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,13 +126,16 @@
 				44E996A9304C105E00C4ED58 /* Sources */,
 				44E996AA304C105E00C4ED58 /* Frameworks */,
 				44E996AB304C105E00C4ED58 /* Resources */,
+				44E996DB304C105F00C4ED58 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44E996D6304C105F00C4ED58 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				44E996AF304C105E00C4ED58 /* AiUsage */,
+				C0DE00000000000000000001 /* Shared */,
 			);
 			name = AiUsage;
 			packageProductDependencies = (
@@ -69,6 +143,52 @@
 			productName = AiUsage;
 			productReference = 44E996AD304C105E00C4ED58 /* AiUsage.app */;
 			productType = "com.apple.product-type.application";
+		};
+		44E996C2304C105F00C4ED58 /* AiUsageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44E996C10304C105F00C4ED58 /* Build configuration list for PBXNativeTarget "AiUsageTests" */;
+			buildPhases = (
+				44E996C3304C105F00C4ED58 /* Sources */,
+				44E996C4304C105F00C4ED58 /* Frameworks */,
+				44E996C5304C105F00C4ED58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44E996C6304C105F00C4ED58 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				44E996C1304C105F00C4ED58 /* AiUsageTests */,
+			);
+			name = AiUsageTests;
+			packageProductDependencies = (
+			);
+			productName = AiUsageTests;
+			productReference = 44E996C0304C105F00C4ED58 /* AiUsageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		44E996D2304C105F00C4ED58 /* AiUsageWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44E996DA304C105F00C4ED58 /* Build configuration list for PBXNativeTarget "AiUsageWidget" */;
+			buildPhases = (
+				44E996D3304C105F00C4ED58 /* Sources */,
+				44E996D4304C105F00C4ED58 /* Frameworks */,
+				44E996D5304C105F00C4ED58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				44E996D1304C105F00C4ED58 /* AiUsageWidget */,
+				C0DE00000000000000000001 /* Shared */,
+			);
+			name = AiUsageWidget;
+			packageProductDependencies = (
+			);
+			productName = AiUsageWidget;
+			productReference = 44E996D0304C105F00C4ED58 /* AiUsageWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +201,13 @@
 				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					44E996AC304C105E00C4ED58 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					44E996C2304C105F00C4ED58 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 44E996AC304C105E00C4ED58;
+					};
+					44E996D2304C105F00C4ED58 = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
@@ -100,12 +227,28 @@
 			projectRoot = "";
 			targets = (
 				44E996AC304C105E00C4ED58 /* AiUsage */,
+				44E996C2304C105F00C4ED58 /* AiUsageTests */,
+				44E996D2304C105F00C4ED58 /* AiUsageWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		44E996AB304C105E00C4ED58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44E996C5304C105F00C4ED58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44E996D5304C105F00C4ED58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +265,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44E996C3304C105F00C4ED58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44E996D3304C105F00C4ED58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44E996C6304C105F00C4ED58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44E996AC304C105E00C4ED58 /* AiUsage */;
+			targetProxy = 44E996C7304C105F00C4ED58 /* PBXContainerItemProxy */;
+		};
+		44E996D6304C105F00C4ED58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44E996D2304C105F00C4ED58 /* AiUsageWidget */;
+			targetProxy = 44E996D7304C105F00C4ED58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		44E996B6304C105F00C4ED58 /* Debug */ = {
@@ -248,13 +418,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AiUsage/AiUsage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Usage";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -278,13 +450,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AiUsage/AiUsage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Usage";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,6 +469,102 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		44E996C8304C105F00C4ED58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardringia.AiUsageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AiUsage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AiUsage";
+			};
+			name = Debug;
+		};
+		44E996C9304C105F00C4ED58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardringia.AiUsageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AiUsage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AiUsage";
+			};
+			name = Release;
+		};
+		44E996D8304C105F00C4ED58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AiUsageWidget/AiUsageWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AiUsageWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Usage";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardringia.AiUsage.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		44E996D9304C105F00C4ED58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AiUsageWidget/AiUsageWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AiUsageWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Usage";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardringia.AiUsage.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -320,6 +590,24 @@
 			buildConfigurations = (
 				44E996B9304C105F00C4ED58 /* Debug */,
 				44E996BA304C105F00C4ED58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44E996C10304C105F00C4ED58 /* Build configuration list for PBXNativeTarget "AiUsageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44E996C8304C105F00C4ED58 /* Debug */,
+				44E996C9304C105F00C4ED58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44E996DA304C105F00C4ED58 /* Build configuration list for PBXNativeTarget "AiUsageWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44E996D8304C105F00C4ED58 /* Debug */,
+				44E996D9304C105F00C4ED58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
