@@ -40,11 +40,13 @@ import Testing
 
     @Test func cursorUsesRemainingCentsAndDerivesWhenOmitted() throws {
         let present = try LimitsReader.parseCursor(Data(#"{"billingCycleEnd":"1771077734000","planUsage":{"remaining":16778,"limit":40000,"includedSpend":0}}"#.utf8))
-        #expect(present.windows[0].remaining == 16778.0 / 40000 * 100)
+        let presentExpected: Double = 16778.0 / 40000 * 100
+        #expect(present.windows[0].remaining == presentExpected)
         #expect(present.windows[0].note == "$167.78 of $400 left")
         #expect(present.windows[0].resetsAt == Date(timeIntervalSince1970: 1771077734))
         let omitted = try LimitsReader.parseCursor(Data(#"{"billingCycleEnd":1771077734000,"planUsage":{"includedSpend":23222,"limit":"40000"}}"#.utf8))
-        #expect(omitted.windows[0].remaining == (40000.0 - 23222) / 40000 * 100)
+        let omittedExpected: Double = (40000.0 - 23222) / 40000 * 100
+        #expect(omitted.windows[0].remaining == omittedExpected)
         #expect(throws: (any Error).self) { try LimitsReader.parseCursor(Data(#"{}"#.utf8)) }
     }
 

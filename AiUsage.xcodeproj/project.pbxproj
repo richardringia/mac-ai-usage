@@ -47,6 +47,16 @@
 		44E996D0304C105F00C4ED58 /* AiUsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AiUsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C0DE00000000000000000002 /* Exceptions for "AiUsageWidget" folder in "AiUsageWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 44E996D2304C105F00C4ED58 /* AiUsageWidget */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		44E996AF304C105E00C4ED58 /* AiUsage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -60,6 +70,9 @@
 		};
 		44E996D1304C105F00C4ED58 /* AiUsageWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C0DE00000000000000000002 /* Exceptions for "AiUsageWidget" folder in "AiUsageWidget" target */,
+			);
 			path = AiUsageWidget;
 			sourceTree = "<group>";
 		};
